@@ -1,1 +1,5 @@
-﻿这是我的一个利用ssh框架开发的bbs论坛网站 ，项目架构：Spring + SpringMVC + Hibernate
+项目介绍：利用spring mvc作为MVC框架，jsp+json+ajax作为前端view的方法。hibernate作为其持久层的框架完成了如下功能。
+开发工具：Mysql，Eclipse、tomcat
+1.网站用户管理：对论坛管理员和普通用户的对帖子加精或删除管理权限进行区别对待。
+2.论坛帖子增删改操作，帖子的关键字查询，帖子点击数统计并可得出帖子热点。
+3.数据库操作的优化。

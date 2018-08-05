@@ -11,6 +11,8 @@ public interface BBSUserRepository {
 	 
 	 BBSUser get(Integer id);
 	 
+	 Integer getId(String username);
+	 
 	 void update(BBSUser u);
 	 
 	 void delete(Integer id);

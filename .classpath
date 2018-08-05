@@ -17,8 +17,9 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -29,5 +30,11 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="src/main/webapp/jarres/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/jarres/commons-beanutils-1.9.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/jarres/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/jarres/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/jarres/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/jarres/morph-1.1.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

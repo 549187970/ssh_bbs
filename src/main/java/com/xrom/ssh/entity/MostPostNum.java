@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "MostPostNum")
+@Table(name = "mostpostnum")
 public class MostPostNum {
 
 	@Id

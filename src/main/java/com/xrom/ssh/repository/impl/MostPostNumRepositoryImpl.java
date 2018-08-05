@@ -26,14 +26,14 @@ public class MostPostNumRepositoryImpl implements MostPostNumRepository {
 
 	@Override
 	public MostPostNum getNum(Integer id) {
-		return (MostPostNum)this.getSession().createQuery("from MostPostNum where id= ?")
+		return (MostPostNum)this.getSession().createQuery("from mostpostnum where id= ?")
 				 .setParameter(0, id).uniqueResult();
 	}
 
 	@Override
 	public void update(MostPostNum m) {
 		System.out.println("update");
-		this.getSession().createQuery("update MostPostNum set mostPostNum=? where id=1").setParameter(0, m.getMostPostNum()).executeUpdate();
+		this.getSession().createQuery("update mostpostnum set mostPostNum=? where id=1").setParameter(0, m.getMostPostNum()).executeUpdate();
 	}
 
 }

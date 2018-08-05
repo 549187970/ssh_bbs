@@ -27,15 +27,22 @@ public class PostDetailsRepositoryImpl implements PostDetailsRepository {
 	}
 
 	@Override
+	public void addMainPost(PostDetails p) {
+		this.getSession().save(p);
+		p.setMainID(p.getPostDid());
+		this.update(p);
+	}
+	
+	@Override
 	public PostDetails getPostDetails(Integer id) {
 		return (PostDetails)this.getSession().createQuery("from PostDetails where id= ?")
 				 .setParameter(0, id).uniqueResult();
 	}
 
 	@Override
-	public void deletePostDetails(Integer id) {
-		this.getSession().createQuery("delete PostDetails where id= ?")
-		 .setParameter(0, id).executeUpdate();
+	public void deletePostDetails(Integer postDid) {
+		this.getSession().createQuery("delete PostDetails where postDid= ?")
+		 .setParameter(0, postDid).executeUpdate();
 	}
 
 	@Override
@@ -51,7 +58,7 @@ public class PostDetailsRepositoryImpl implements PostDetailsRepository {
 
 	@Override
 	public List<PostDetails> getPostDetailsMainID(Integer mainID) {
-		return (List<PostDetails>)this.getSession().createQuery("from PostDetails where mainID= ?")
+		return (List<PostDetails>)this.getSession().createQuery("from PostDetails where mainID =? order by postDid")
 				 .setParameter(0, mainID).list();
 	}
 
@@ -66,5 +73,6 @@ public class PostDetailsRepositoryImpl implements PostDetailsRepository {
 		this.getSession().createQuery("delete PostDetails where mainID= ?")
 		 .setParameter(0, mainID).executeUpdate();
 	}
+
 
 }

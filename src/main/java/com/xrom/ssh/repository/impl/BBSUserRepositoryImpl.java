@@ -47,4 +47,10 @@ public class BBSUserRepositoryImpl implements BBSUserRepository{
 				 .setParameter(0, name).uniqueResult();
 	}
 
+	@Override
+	public Integer getId(String username) {
+		return (Integer)this.getSession().createQuery("select id from BBSUser where username= ?")
+				 .setParameter(0, username).uniqueResult();
+	}
+
 }

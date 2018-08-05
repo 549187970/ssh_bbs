@@ -6,6 +6,8 @@ import com.xrom.ssh.entity.PostDetails;
 
 public interface PostDetailsService {
 	void addPost(PostDetails p);
+	
+	void addMainPost(PostDetails p);
 	 
 	PostDetails getPostDetails(Integer id);
 	 

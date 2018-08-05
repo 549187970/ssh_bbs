@@ -5,7 +5,7 @@
          version="3.0">
     <!-- 地址为http://localhost:8080/  显示的默认网页-->
     <welcome-file-list>
-        <welcome-file>/index.jsp</welcome-file>
+        <welcome-file>/test.jsp</welcome-file>
     </welcome-file-list>
 
     <!--加载Spring的配置文件到上下文中去-->
@@ -32,7 +32,17 @@
         <servlet-name>spring</servlet-name>
         <url-pattern>/</url-pattern>  <!--拦截所有请求,拦截后web容器会将拦截的请求交给DispatcherServlet处理-->
     </servlet-mapping>
-    <!-- spring MVC config end-->
+    <!--
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>*.ico</url-pattern>
+        <url-pattern>/img/*</url-pattern>
+        <url-pattern>/fonts/*</url-pattern>
+        <url-pattern>/font/*</url-pattern>
+    </servlet-mapping>
+     spring MVC config end-->
 
     <!-- Spring监听器 -->
     <listener>

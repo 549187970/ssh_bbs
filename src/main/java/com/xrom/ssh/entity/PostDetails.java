@@ -13,23 +13,40 @@ import lombok.Data;
 @Entity
 @Table(name = "PostDetails")
 public class PostDetails {
+	/**
+	 * 帖子序列号
+	 */
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer postDid;
 	
-	
+	/**
+	 * 帖子中几楼序号
+	 */
 	@Column(name = "mainID",length=10)
 	private Integer mainID;
 	
+	/**
+	 * 帖子标题
+	 */
 	@Column(name = "title",length=25)
 	private String title;
 	
+	/**
+	 * 楼层内容
+	 */
 	@Column(name = "cont",length=100)
 	private String cont;
 	
+	/**
+	 * 用户ID
+	 */
 	@Column(name = "userID",length=10)
 	private Integer userID;
 
+	/**
+	 * 是否是楼主
+	 */
 	@Column(name = "isMainPost")
 	private boolean isMainPost;
 	

@@ -62,8 +62,9 @@
 				<c:if test="${ not empty post}"> 
                 <c:forEach items="${post}" var="p" >
                 <%
-                	i++;
-                	floor = i == 0 ? "楼主" : "第" + i + "楼";
+                	floor = i == 0 ? "楼主" : "第" +( ++i) + "楼";
+          			if(i==0)
+          				i++;
                 %>
                   <table summary="Message" border="0" cellpadding="0" cellspacing="0" width="100%">
                     <tbody>
@@ -87,8 +88,7 @@
                                   <span class="jive-description"> 发表:
                                   34 <br>
                                   点数: 100<br>
-                                  注册:
-                                  07-5-10 <br>
+		<%=floor%>		 <br>
                                   <a href="http://blog.chinajavaworld.com/u/215489" target="_blank"><font color="red">访问我的Blog</font></a> </span> </td>
                               </tr>
                             </tbody>
@@ -100,7 +100,7 @@
                             <tbody>
                               <tr valign="top">
                                 <td width="1%"></td>
-                                <td width="97%"><span class="jive-subject"><%=floor + "-------"%>${p.title}</span> </td>
+                                <td width="97%"><span class="jive-subject">${p.title}</span> </td>
                                 <td class="jive-rating-buttons" nowrap="nowrap" width="1%"></td>
                                 <td width="1%"><div class="jive-buttons">
                                     <table border="0" cellpadding="0" cellspacing="0">
@@ -108,7 +108,7 @@
                                         <tr>
                                           <td>&nbsp;</td>
                                           <td class="jive-icon"><a href="http://bbs.chinajavaworld.com/post%21reply.jspa?messageID=780144" title="回复本主题"><img src="images/reply-16x16.gif" alt="回复本主题" border="0" height="16" width="16"></a> </td>
-                                          <td class="jive-icon-label"><a href="reply?id=${p.mainID}" title="回复本主题">回复</a> </td>
+                                          <td class="jive-icon-label"><a href="reply?id=${mainid}" title="回复本主题">回复</a> </td>
                                         </tr>
                                       </tbody>
                                     </table>

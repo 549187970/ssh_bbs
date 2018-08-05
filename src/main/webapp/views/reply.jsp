@@ -8,7 +8,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title>Java|Java世界_中文论坛|ChinaJavaWorld技术论坛 : 初学java遇一难题！！望大家能帮忙一下 ...</title>
+<title>Java|Java世界_中文论坛|${replytitle} </title>
 <meta http-equiv="content-type" content="text/html; charset=GBK">
 <link rel="stylesheet" type="text/css" href="images/style.css" title="Integrated Styles">
 <script language="JavaScript" type="text/javascript" src="images/global.js"></script>
@@ -37,7 +37,7 @@
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tbody>
       <tr valign="top">
-        <td width="99%"><p class="jive-breadcrumbs"> <a href="http://bbs.chinajavaworld.com/index.jspa">首页</a> &#187; <a href="http://bbs.chinajavaworld.com/forumindex.jspa?categoryID=1">ChinaJavaWorld技术论坛|Java世界_中文论坛</a> &#187; <a href="http://bbs.chinajavaworld.com/category.jspa?categoryID=2">Java 2 Platform, Standard Edition (J2SE)</a> &#187; <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;start=0">Java语言*初级版</a> </p>
+        <td width="99%"><p class="jive-breadcrumbs"> <a href="bbs">首页</a> &#187; <a href="bbs">ChinaJavaWorld技术论坛|Java世界_中文论坛</a> &#187; <a href="bbs">Java 2 Platform, Standard Edition (J2SE)</a> &#187; <a href="bbs">Java语言*初级版</a> </p>
           <p class="jive-page-title"> 主题: reply </p></td>
         <td width="1%"><div class="jive-accountbox"></div></td>
       </tr>
@@ -48,7 +48,7 @@
       <tbody>
         <tr>
           <td class="jive-icon"><a href="http://bbs.chinajavaworld.com/post%21reply.jspa?threadID=744236"><img src="images/reply-16x16.gif" alt="回复本主题" border="0" height="16" width="16"></a></td>
-          <td class="jive-icon-label"><a id="jive-reply-thread" href="reply.jsp">回复本主题</a> </td>
+          <td class="jive-icon-label"><a id="jive-reply-thread" href="reply?id=${mainid}">回复本主题</a> </td>
         </tr>
       </tbody>
     </table>
@@ -63,7 +63,7 @@
                 <div class="jive-messagebox">
                 	
                 	<form action="replyDeal" method="post">
-                		<input type="hidden" name="mainID" value="${mainID}"/>
+                		<input type="hidden" name="mainid" value="${mainid}"/>
                 		标题：<input type="text" name="title"><br>
                 		内容：<textarea name="cont" rows="15" cols="80"></textarea>
                 		<br>

@@ -1,18 +1,19 @@
-<%@ page pageEncoding="GB18030"%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 	<head>
-		<title>·¢±íÐÂÖ÷Ìâ</title>
-		<meta http-equiv="content-type" content="text/html; charset=GBK">
+		<title>å‘è¡¨æ–°ä¸»é¢˜</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css" href="images/style.css"
 			title="Integrated Styles">
 		<script language="JavaScript" type="text/javascript"
 			src="images/global.js"></script>
 		<!-- fckeditor -->
-		<!-- ÎªÁËËÙ¶È¶øÃ»ÓÐÊ¹ÓÃfckeditor -->
+		<!-- ä¸ºäº†é€Ÿåº¦è€Œæ²¡æœ‰ä½¿ç”¨fckeditor -->
 		<!-- end of fckeditor -->
 
 		<link rel="alternate" type="application/rss+xml" title="RSS"
@@ -39,15 +40,15 @@
 					<tr valign="top">
 						<td width="99%">
 							<p class="jive-breadcrumbs">
-								Ê×Ò³</a> &#187;
-							ChinaJavaWorld¼¼ÊõÂÛÌ³|JavaÊÀ½ç_ÖÐÎÄÂÛÌ³</a>
+								é¦–é¡µ</a> &#187;
+							ChinaJavaWorldæŠ€æœ¯è®ºå›|Javaä¸–ç•Œ_ä¸­æ–‡è®ºå›</a>
 								&#187;
 								Java
 									2 Platform, Standard Edition (J2SE)</a> &#187;
-								JavaÓïÑÔ*³õ¼¶°æ</a>
+								Javaè¯­è¨€*åˆçº§ç‰ˆ</a>
 							</p>
 							<p class="jive-page-title">
-								·¢±íÐÂÖ÷Ìâ
+								å‘è¡¨æ–°ä¸»é¢˜
 								<br>
 							</p>
 						</td>
@@ -71,13 +72,13 @@
 									<div class="jive-table">
 										<div class="jive-messagebox">
 
-											<form action="createPost" method="post">
+											<form action="createPost" method="post"" accept-charset="utf-8" onsubmit="document.charset='utf-8'">
 												<input type="hidden" name="action" value="post" />
 												
-												±êÌâ£º
+												æ ‡é¢˜ï¼š
 												<input type="text" name="title" maxlength="25">
 												<br>
-												ÄÚÈÝ£º
+												å†…å®¹ï¼š
 												<textarea name="cont" rows="15" cols="80"></textarea>
 												<br>
 												<input type="submit" value="submit" />

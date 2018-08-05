@@ -1,3 +1,6 @@
+<%@page import="java.awt.Window"%>
+<%@page import="org.hibernate.internal.util.xml.XMLHelper"%>
+<%@page import="org.hibernate.Session"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -12,6 +15,9 @@
 <script language="JavaScript" type="text/javascript" src="images/global.js"></script>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?forumID=20">
 <script language="JavaScript" type="text/javascript" src="images/common.js"></script>
+<script type="text/javascript" >
+var s=new XMLHttpRequest();
+</script>
 </head>
 <body>
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -32,10 +38,10 @@
             (模仿)</p>
             <%
             String str=null;
-            if(request.getAttribute("username")==null){
+            if(session.getAttribute("username")==null){
             	str="你还未登陆，请登陆";
             }else{
-            	str="欢迎"+request.getAttribute("username")+"使用";
+            	str="欢迎"+session.getAttribute("username")+"使用";
             }
             %>
             <p class="jive-description"> <%=str %></p>
@@ -49,7 +55,7 @@
       <tbody>
         <tr>
           <td class="jive-icon"><a href="post.jsp"><img src="images/post-16x16.gif" alt="发表新主题" border="0" height="16" width="16"></a></td>
-          <td class="jive-icon-label"><a id="jive-post-thread" href="post.jsp">发表新主题</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;isBest=1"></a></td>
+          <td class="jive-icon-label"><a id="jive-post-thread" href="publish">发表新主题</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;isBest=1"></a></td>
         </tr>
       </tbody>
     </table>
@@ -60,6 +66,9 @@
       <tr valign="top">
         <td><span class="nobreak"> 页:
           1,316 - <span class="jive-paginator"> [ <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;start=0&amp;isBest=0">上一页</a> | <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;start=0&amp;isBest=0" class="">1</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;start=25&amp;isBest=0" class="jive-current">2</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;start=50&amp;isBest=0" class="">3</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;start=75&amp;isBest=0" class="">4</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;start=100&amp;isBest=0" class="">5</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;start=125&amp;isBest=0" class="">6</a> | <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;start=50&amp;isBest=0">下一页</a> ] </span> </span> </td>
+          <tr>
+          	本网站共有${postnum}个帖子发布。
+          <tr>
       </tr>
     </tbody>
   </table>
@@ -90,7 +99,7 @@
                       </div></td>
                       
                     <td nowrap="nowrap" width="1%">
-                    	<a href="delete?postDid=${p.postDid}&mainID=${p.mainID}">DEL</a>
+                    	<a href="delete?postDid=${p.postDid}userID=${p.userID}&mainID=${p.mainID}">DEL</a>
                     </td>
                     
                     

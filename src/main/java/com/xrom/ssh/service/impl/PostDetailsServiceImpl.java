@@ -19,6 +19,13 @@ public class PostDetailsServiceImpl implements PostDetailsService{
 	public void addPost(PostDetails p) {
 		PostDetailsRepositoryImpl.addPost(p);
 	}
+	
+
+	@Override
+	public void addMainPost(PostDetails p) {
+		PostDetailsRepositoryImpl.addMainPost(p);
+	}
+
 
 	@Override
 	public PostDetails getPostDetails(Integer id) {
